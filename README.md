@@ -309,4 +309,4 @@ MIT License
 
 ## 支持
 
-如有问题，请查看 [Lightspeed API 文档](https://x-series-api.lightspeedhq.com/docs/workflows_business_rules#remote-business-rule-api) 或联系开发团队。 
+如有问题，请查看 [Lightspeed API 文档](https://x-series-api.lightspeedhq.com/docs/workflows_business_rules#remote-business-rule-api) 或联系开发团队。
