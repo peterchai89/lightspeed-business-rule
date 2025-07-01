@@ -140,15 +140,16 @@ function handleSaleReadyForPayment(eventData) {
     }
   }
   
+  // 移除自定义字段设置
   // 如果有客户，设置自定义字段
-  if (config.businessRules.enableAutoCustomFields && customer) {
-    actions.push({
-      type: 'set_custom_field',
-      entity: 'sale',
-      custom_field_name: config.customFields.sale.customerType,
-      custom_field_value: customer.account_type || 'regular'
-    });
-  }
+  // if (config.businessRules.enableAutoCustomFields && customer) {
+  //   actions.push({
+  //     type: 'set_custom_field',
+  //     entity: 'sale',
+  //     custom_field_name: config.customFields.sale.customerType,
+  //     custom_field_value: customer.account_type || 'regular'
+  //   });
+  // }
   
   return actions;
 }
