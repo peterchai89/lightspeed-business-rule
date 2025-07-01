@@ -108,32 +108,32 @@ function handleSaleReadyForPayment(eventData) {
     
     console.log(`💰 销售总额: $${totalPrice}`);
     
-    // 价格小于120
-    if (totalPrice < 120) {
+    // 价格小于109.09
+    if (totalPrice < 109.09) {
       actions.push({
         type: 'confirm',
-        title: '🎉It\'s Tax Time – Your Reward is Waiting!',
-        message: 'Spend $120, instantly save $20 – the more you buy, the more you save!',
+        title: '🎉Tax Time - Spend $120 get $20 back',
+        message: 'Buy more, save more - excludes devices and repairs',
         confirm_label: 'Done',
         dismiss_label: 'Cancel'
       });
     }
-    // 价格在120-200之间
-    else if (totalPrice >= 120 && totalPrice < 200) {
+    // 价格在109.09-181.81之间
+    else if (totalPrice >= 109.09 && totalPrice < 181.81) {
       actions.push({
         type: 'confirm',
-        title: '💸 Tax Time Offer: Spend $200, Get $50 Off!',
-        message: 'Spend $200, instantly save $50 – the more you buy, the more you save!',
+        title: '💸Tax Time - Spend $200 get $50 back',
+        message: 'Buy more, save more - excludes devices and repairs',
         confirm_label: 'Done',
         dismiss_label: 'Cancel'
       });
     }
-    // 价格在200-300之间
-    else if (totalPrice >= 200 && totalPrice < 300) {
+    // 价格在181.81-272.72之间
+    else if (totalPrice >= 181.81 && totalPrice < 272.72) {
       actions.push({
         type: 'confirm',
-        title: '⏳ Limited Time Tax Season Special!',
-        message: 'Spend $300, instantly save $100 – the more you buy, the more you save!',
+        title: '⏳Tax Time - Spend $300 get $100 back',
+        message: 'Buy more, save more - excludes devices and repairs',
         confirm_label: 'Done',
         dismiss_label: 'Cancel'
       });

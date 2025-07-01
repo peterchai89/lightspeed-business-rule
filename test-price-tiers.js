@@ -12,33 +12,33 @@ console.log('');
 // 测试不同价格区间的数据
 const priceTestCases = [
   {
-    name: '价格 < $120 (应该显示 $20 优惠)',
+    name: '价格 < $109.09 (应该显示 $20 优惠)',
     totalPrice: '99.99',
-    expectedMessage: 'Spend $120, instantly save $20'
+    expectedMessage: 'Spend $120 get $20 back'
   },
   {
-    name: '价格 = $120 (应该显示 $50 优惠)',
-    totalPrice: '120.00',
-    expectedMessage: 'Spend $200, instantly save $50'
+    name: '价格 = $109.09 (应该显示 $50 优惠)',
+    totalPrice: '109.09',
+    expectedMessage: 'Spend $200 get $50 back'
   },
   {
-    name: '价格 $120-200 (应该显示 $50 优惠)',
+    name: '价格 $109.09-181.81 (应该显示 $50 优惠)',
     totalPrice: '150.00',
-    expectedMessage: 'Spend $200, instantly save $50'
+    expectedMessage: 'Spend $200 get $50 back'
   },
   {
-    name: '价格 = $200 (应该显示 $100 优惠)',
-    totalPrice: '200.00',
-    expectedMessage: 'Spend $300, instantly save $100'
+    name: '价格 = $181.81 (应该显示 $100 优惠)',
+    totalPrice: '181.81',
+    expectedMessage: 'Spend $300 get $100 back'
   },
   {
-    name: '价格 $200-300 (应该显示 $100 优惠)',
+    name: '价格 $181.81-272.72 (应该显示 $100 优惠)',
     totalPrice: '250.00',
-    expectedMessage: 'Spend $300, instantly save $100'
+    expectedMessage: 'Spend $300 get $100 back'
   },
   {
-    name: '价格 >= $300 (不应该显示任何确认)',
-    totalPrice: '350.00',
+    name: '价格 >= $272.72 (不应该显示任何确认)',
+    totalPrice: '300.00',
     expectedMessage: '无确认消息'
   }
 ];
