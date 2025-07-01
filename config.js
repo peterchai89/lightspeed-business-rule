@@ -92,13 +92,13 @@ module.exports = {
     enableLargeSaleConfirmation: true,
     
     // 是否启用商品推荐
-    enableProductRecommendation: true,
+    enableProductRecommendation: false,
     
     // 是否启用数量确认
-    enableQuantityConfirmation: true,
+    enableQuantityConfirmation: false,
     
     // 是否启用新客户欢迎
-    enableNewCustomerWelcome: true,
+    enableNewCustomerWelcome: false,
     
     // 是否自动设置自定义字段
     enableAutoCustomFields: true
