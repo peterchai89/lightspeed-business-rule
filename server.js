@@ -101,17 +101,38 @@ function handleSaleReadyForPayment(eventData) {
   const { sale, customer } = eventData;
   const actions = [];
   
-  // 检查销售总额，如果超过特定金额则要求确认
+  // 根据销售总额返回不同的确认消息
   if (config.businessRules.enableLargeSaleConfirmation) {
     const totalPrice = parseFloat(sale.total_price || 0);
     
-    if (totalPrice > config.sales.largeSaleThreshold) {
+    // 价格小于120
+    if (totalPrice < 120) {
       actions.push({
         type: 'confirm',
-        title: '大额销售确认',
-        message: config.sales.largeSaleMessage.replace('$1000', `$${totalPrice.toFixed(2)}`),
-        confirm_label: config.sales.largeSaleConfirmLabel,
-        dismiss_label: config.sales.largeSaleDismissLabel
+        title: '🎉It\'s Tax Time – Your Reward is Waiting!',
+        message: 'Spend $120, instantly save $20 – the more you buy, the more you save!',
+        confirm_label: 'Done',
+        dismiss_label: 'Cancel'
+      });
+    }
+    // 价格在120-200之间
+    else if (totalPrice >= 120 && totalPrice < 200) {
+      actions.push({
+        type: 'confirm',
+        title: '💸 Tax Time Offer: Spend $200, Get $50 Off!',
+        message: 'Spend $200, instantly save $50 – the more you buy, the more you save!',
+        confirm_label: 'Done',
+        dismiss_label: 'Cancel'
+      });
+    }
+    // 价格在200-300之间
+    else if (totalPrice >= 200 && totalPrice < 300) {
+      actions.push({
+        type: 'confirm',
+        title: '⏳ Limited Time Tax Season Special!',
+        message: 'Spend $300, instantly save $100 – the more you buy, the more you save!',
+        confirm_label: 'Done',
+        dismiss_label: 'Cancel'
       });
     }
   }
