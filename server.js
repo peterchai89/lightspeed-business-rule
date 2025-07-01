@@ -103,7 +103,10 @@ function handleSaleReadyForPayment(eventData) {
   
   // 根据销售总额返回不同的确认消息
   if (config.businessRules.enableLargeSaleConfirmation) {
-    const totalPrice = parseFloat(sale.total_price || 0);
+    // 尝试获取价格，优先使用 total_price，如果没有则使用 price_total
+    const totalPrice = parseFloat(sale.total_price || sale.price_total || 0);
+    
+    console.log(`💰 销售总额: $${totalPrice}`);
     
     // 价格小于120
     if (totalPrice < 120) {

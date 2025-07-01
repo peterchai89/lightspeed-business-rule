@@ -78,6 +78,7 @@ async function testPriceTier(testCase) {
         ],
         note: '',
         total_price: testCase.totalPrice,
+        price_total: testCase.totalPrice, // 添加 price_total 字段
         total_tax: '0.00',
         custom_fields: []
       },
